@@ -1,0 +1,100 @@
+﻿@page "{id}"
+@using Mqeb.Application.DTOs.Account
+@model Mqeb.Web.Pages.Admin.Users.EditUserModel
+@{
+    ViewData["Title"] = "ویرایش کاربر";
+}
+
+<section class="content-header">
+    <h1>
+        ویرایش کاربر
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Admin"><i class="fa fa-dashboard"></i> پنل مدیریت</a></li>
+        <li><a href="/Admin/Users">مدیران سایت</a></li>
+        <li><a href="/">ویرایش کاربر</a></li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">ویرایش مدیر</h3>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="EditUserViewModel.UserId" />
+            <input type="hidden" asp-for="EditUserViewModel.AvatarName" />
+            <div class="box-body">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="EditUserViewModel.UserName"></label>
+                        <input asp-for="EditUserViewModel.UserName" class="form-control" type="text" placeholder="ایمیل">
+                        <span asp-validation-for="EditUserViewModel.UserName" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="EditUserViewModel.Email"></label>
+                        <input asp-for="EditUserViewModel.Email" class="form-control" type="text" placeholder="ایمیل">
+                        <span asp-validation-for="EditUserViewModel.Email" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="EditUserViewModel.FirstName"></label>
+                        <input asp-for="EditUserViewModel.FirstName" class="form-control" type="text" placeholder="نام">
+                        <span asp-validation-for="EditUserViewModel.FirstName" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="EditUserViewModel.LastName"></label>
+                        <input asp-for="EditUserViewModel.LastName" class="form-control" type="text" placeholder="نام خانوادگی">
+                        <span asp-validation-for="EditUserViewModel.LastName" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="EditUserViewModel.Password"></label>
+                        <input asp-for="EditUserViewModel.Password" class="form-control" type="text" placeholder="رمز عبور">
+                        <span asp-validation-for="EditUserViewModel.Password" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="EditUserViewModel.UserAvatar"></label>
+                        <input asp-for="EditUserViewModel.UserAvatar" class="form-control">
+                        <span asp-validation-for="EditUserViewModel.UserAvatar" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="col-md-12">
+                        <img id="imgAvatar" src="/UserAvatar/@Model.EditUserViewModel.AvatarName" class="user-avatar thumbnail" />
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-warning">ویرایش</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imgAvatar').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#EditUserViewModel_UserAvatar").change(function () {
+            readURL(this);
+        });
+    </script>
+
+}

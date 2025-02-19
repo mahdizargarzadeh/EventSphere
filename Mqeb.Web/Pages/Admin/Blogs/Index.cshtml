@@ -1,0 +1,102 @@
+﻿@page
+@using Mqeb.Application.Convertors
+@model Mqeb.Web.Pages.Admin.Blogs.IndexModel
+@{
+    ViewData["Title"] = "لیست بلاگ ها";
+}
+
+<section class="content-header">
+    <h1>
+        لیست بلاگ ها
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Admin"><i class="fa fa-dashboard"></i> پنل مدیریت</a></li>
+        <li><a href="/Admin/Blogs">مدیران سایت</a></li>
+        <li><a href="/Admin/Blogs">لیست بلاگ ها</a></li>
+
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <form>
+            <div class="form-group col-md-5">
+                <input type="text" name="filterTitle" class="form-control" placeholder="نام بلاگ" />
+            </div>
+            <div class="col-sm-2 col-md-2">
+                <button type="submit" class="btn btn-info">جستجو</button>
+                <a class="btn btn-success" href="/Admin/Blogs">خالی</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5 col-md-5">
+            <a class="btn btn-success" href="/Admin/Blogs/CreateBlog">افزودن بلاگ جدید</a>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-example" aria-describedby="dataTables-example_info">
+                <thead class="thead-background">
+                    <tr>
+                        <th>پوستر</th>
+                        <th>عنوان</th>
+                        <th>نویسنده</th>
+                        <th>تاریخ ثبت</th>
+                        <th>تاریخ آخرین بروزرسانی</th>
+                        <th>دستورات</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody-background">
+                    @foreach (var item in Model.BlogForAdminViewModel.Blogs)
+                    {
+                        <tr>
+                            <td>
+                                <a href="/Blog/@item.BlogId/@item.BlogTitle">
+                                    <img src="/Blog/Poster/Small/@item.BlogImageName" width="70" />
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/Blog/@item.BlogId/@item.BlogTitle">
+                                    @item.BlogTitle
+                                </a>
+                            </td>
+                            <td>@(item.User.FirstName + " " + item.User.LastName)</td>
+                            <td>@item.CreateDate.ToShamsi()</td>
+                            <td>@item.UpdateDate?.ToShamsi()</td>
+                            <td>
+                                <form method="post">
+                                    <a href="/Admin/Blogs/EditBlog/@item.BlogId" class="btn btn-warning btn-sm">
+                                        ویرایش
+                                    </a>
+                                    <button type="submit" formaction="/Admin/Blogs/DeleteBlog?blogId=@item.BlogId&handler=delete" class="btn btn-danger btn-sm">
+                                        حذف
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    @if (Model.BlogForAdminViewModel.CurrentPage >= 1)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="pagination pagination-sm no-margin pull-right">
+                    @for (int i = 1; i <= Model.BlogForAdminViewModel.PageCount; i++)
+                    {
+                        <li class="@((i==Model.BlogForAdminViewModel.CurrentPage)?"active":"")">
+                            <a href="/Admin/Blogs?PageId=@i">@i</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+
+</section>

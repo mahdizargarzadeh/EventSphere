@@ -1,0 +1,86 @@
+﻿@page "/Admin/ContactUs/Answer/{id}"
+@using Mqeb.Application.Convertors
+@model Mqeb.Web.Pages.Admin.ContactUses.AnswerModel
+@{
+    ViewData["Title"] = "مشاهده و پاسخ به پیام";
+}
+
+<section class="content-header">
+    <h1>
+        @ViewData["Title"]
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Admin"><i class="fa fa-dashboard"></i> پنل مدیریت</a></li>
+        <li><a href="#">@ViewData["Title"]</a></li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">مشاهده پيام</h3>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <span>عنوان : @Model.ContactUs.Title</span>
+                    <br>
+                    <span>نویسنده : @Model.ContactUs.Email</span>
+                    <br>
+                    <span>تاریخ ارسال : @Model.ContactUs.CreateDate.ToShamsi()</span>
+                    <br>
+                </div>
+                <div class="col-md-12">
+                    <label>متن پیام : </label>
+                    <br />
+                    <p>
+                        @Html.Raw(Model.ContactUs.Message)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">پاسخ به پيام</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <form method="post">
+                    <input type="hidden" name="email" value="@Model.ContactUs.Email"/>
+                    <input type="hidden" name="contactUsId" value="@Model.ContactUs.ContactUsId"/>
+                    <div class="box-body">
+                        <textarea name="message" id="message" rows="10" class="form-control" required></textarea>
+                    </div>
+                    <div class="box-footer clearfix">
+                        <button type="submit" class="btn btn-sm btn-info btn-flat pull-left">ارسال</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts
+{
+    <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+    <script>
+
+        CKEDITOR.replace('message', {
+            customConfig: '/AdminContent/dist/js/Config.js'
+        });
+
+    </script>
+
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,173 @@
+﻿@page
+@model Mqeb.Web.Pages.Admin.Blogs.CreateBlogModel
+@{
+    ViewData["Title"] = "افزودن بلاگ";
+}
+
+<section class="content-header">
+    <h1>
+        افزودن بلاگ
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Admin"><i class="fa fa-dashboard"></i> پنل مدیریت</a></li>
+        <li><a href="/Admin/Blogs">مدیریت بلاگ ها</a></li>
+        <li><a href="/Admin/Blogs/CreateBlogs">افزودن بلاگ</a></li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">افزودن بلاگ</h3>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="CreateBlogViewModel.BlogGalleryImages"/>
+            <div class="box-body">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label asp-for="CreateBlogViewModel.BlogTitle"></label>
+                        <input asp-for="CreateBlogViewModel.BlogTitle" class="form-control" type="text" placeholder="عنون بلاگ">
+                        <span asp-validation-for="CreateBlogViewModel.BlogTitle" class="text-danger"></span>
+                        <br>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateBlogViewModel.CategoryId"></label>
+                        <select asp-for="CreateBlogViewModel.CategoryId" class="form-control" asp-items="@(ViewData["Categories"] as SelectList)"></select>
+                        <span asp-validation-for="CreateBlogViewModel.CategoryId" class="text-danger"></span>
+                        <br>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateBlogViewModel.SubCategory"></label>
+                        <select asp-for="CreateBlogViewModel.SubCategory" class="form-control" asp-items="@(ViewData["SubGroups"] as SelectList)"></select>
+                        <span asp-validation-for="CreateBlogViewModel.SubCategory" class="text-danger"></span>
+                        <br>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label asp-for="CreateBlogViewModel.BlogDescription"></label>
+                        <textarea asp-for="CreateBlogViewModel.BlogDescription" class="form-control" rows="10"></textarea>
+                        <span asp-validation-for="CreateBlogViewModel.BlogDescription" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label asp-for="CreateBlogViewModel.BlogVideos"></label>
+                        <input asp-for="CreateBlogViewModel.BlogVideos" class="form-control" type="text" placeholder="مثال : https://www.aparat.com/video/video/embed/videohash/eVRMG/vt/frame - https://www.aparat.com/video/video/embed/videohash/Ti4pq/vt/frame">
+                        <span class="text-danger">لینک ها را با - جدا کنید</span>
+                        <span asp-validation-for="CreateBlogViewModel.BlogVideos" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateBlogViewModel.LowDescription"></label>
+                        <textarea asp-for="CreateBlogViewModel.LowDescription" class="form-control" rows="10"></textarea>
+                        <span asp-validation-for="CreateBlogViewModel.LowDescription" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateBlogViewModel.Tags"></label>
+                        <input asp-for="CreateBlogViewModel.Tags" class="form-control" type="text" placeholder="مثال : جلسه قرآن هفتگی - استاد شاهمیوه - موسسه بینه">
+                        <span class="text-danger">کلمات را با - جدا کنید</span>
+                        <span asp-validation-for="CreateBlogViewModel.Tags" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label asp-for="CreateBlogViewModel.BlogPoster"></label>
+                        <input asp-for="CreateBlogViewModel.BlogPoster" class="form-control">
+                        <span asp-validation-for="CreateBlogViewModel.BlogPoster" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="col-md-12">
+                        <div data-url="/Home/DropzoneTarget" class="dropzone mt-4" id="my-dropzone">
+                            <div class="fallback">
+                                <input name="files" type="file" multiple />
+                            </div>
+                            <div class="dz-message">
+                                <p>تصاویر بلاگ رو در این قسمت آپلود کنید</p>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                <button id="SubmitBtn" type="submit" class="btn btn-primary">ثبت</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+@section Scripts
+{
+<script src="~/ckeditor4/ckeditor/ckeditor.js"></script>
+
+<script>
+
+    function DropzoneParameterName() {
+            return 'files';
+        }
+
+        Dropzone.options.myDropzone = {
+            url: $("#my-dropzone").attr("data-url"),
+            parallelUploads: 100, // How Many Files process in parallel
+            uploadMultiple: true, // Add Multiple To fallback input - Cant Use With chunking
+            maxFilesize: 100000000, // In byte - 100000000 is 100 mb
+            paramName: DropzoneParameterName, // if uploadMultiple is true set as true for add [] in name
+            maxFiles: null, // If not null defines how many files this Dropzone handles. If it exceeds, the event maxfilesexceeded will be called.
+            acceptedFiles: '.jpg, .png', // default is null - This is a comma separated list of mime types or file extensions [image/*,application/pdf,.psd]
+            init: function () {
+                this.on("errormultiple",
+                    function (file, message) {
+                        swal("Error", message, "error");
+                    });
+                this.on("sendingmultiple",
+                    function (file) {
+                        $("#SubmitBtn").prop("disabled", true);
+                    });
+                this.on("queuecomplete",
+                    function (file) {
+                        $("#SubmitBtn").prop("disabled", false);
+                    });
+                this.on("successmultiple",
+                    function (file, response) {
+                        if (response.status === "Success") {
+                             let imageNames = [];
+                             //for(item in response.data) {
+                             //   imageNames.push(item[]);
+                             //}
+                             for(let i = 0;i<response.data.length; i++) {
+                                 imageNames.push(response.data[i]);
+                             }
+                             $("#CreateBlogViewModel_BlogGalleryImages").val(imageNames);
+                        } else {
+                            swal("Error", "عملیات با خطا مواجه شد .", "error");
+                        }
+                    });
+                this.on("maxfilesreached",
+                    function (file) {
+                        this.removeEventListeners();
+                    });
+            }
+        }
+
+    $("#CreateBlogViewModel_CategoryId").change(function () {
+            $("#CreateBlogViewModel_SubCategory").empty();
+            $.getJSON("/Home/GetSubGroups/" + $("#CreateBlogViewModel_CategoryId :selected").val(),
+                function (data) {
+
+                    $.each(data,
+                        function () {
+                            $("#CreateBlogViewModel_SubCategory").append('<option value=' + this.value + '>' + this.text + '</option>');
+                        });
+
+                });
+        });
+
+    CKEDITOR.replace('CreateBlogViewModel_BlogDescription', {
+        customConfig: '/ckeditor4/ckeditor/config.js'
+    });
+</script>
+
+<partial name="_ValidationScriptsPartial" />
+}

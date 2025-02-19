@@ -1,0 +1,64 @@
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.deps.json
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\bin\Debug\net5.0\ref\Mqeb.Application.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Domain.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.AssemblyReference.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.AssemblyInfoInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.AssemblyInfo.cs
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.CoreCompileInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.CopyComplete
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\obj\Debug\net5.0\ref\Mqeb.Application.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.deps.json
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\ref\Mqeb.Application.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Domain.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.AssemblyReference.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.AssemblyInfoInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.AssemblyInfo.cs
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.CoreCompileInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.CopyComplete
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\ref\Mqeb.Application.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.TagHelpers.xml
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Microsoft.Extensions.FileSystemGlobbing.xml
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.deps.json
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.pdb
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Domain.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Domain.pdb
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.AssemblyReference.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.AssemblyInfoInputs.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.AssemblyInfo.cs
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.CoreCompileInputs.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.CopyComplete
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\refint\Mqeb.Application.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.pdb
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\ref\Mqeb.Application.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.deps.json
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Application.pdb
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Domain.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\bin\Debug\net5.0\Mqeb.Domain.pdb
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.AssemblyReference.cache
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.AssemblyInfoInputs.cache
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.AssemblyInfo.cs
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.CoreCompileInputs.cache
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.csproj.CopyComplete
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\refint\Mqeb.Application.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\Mqeb.Application.pdb
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Application\obj\Debug\net5.0\ref\Mqeb.Application.dll

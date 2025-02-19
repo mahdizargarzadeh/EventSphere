@@ -1,0 +1,48 @@
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.deps.json
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\bin\Debug\net5.0\ref\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.AssemblyInfoInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.AssemblyInfo.cs
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.csproj.CoreCompileInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\obj\Debug\net5.0\ref\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.csproj.AssemblyReference.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.deps.json
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\bin\Debug\net5.0\ref\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.AssemblyInfoInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.AssemblyInfo.cs
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.csproj.CoreCompileInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\ref\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.csproj.AssemblyReference.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.deps.json
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.pdb
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.csproj.AssemblyReference.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.AssemblyInfoInputs.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.AssemblyInfo.cs
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.csproj.CoreCompileInputs.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\refint\Mqeb.Domain.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.pdb
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\ref\Mqeb.Domain.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.deps.json
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\bin\Debug\net5.0\Mqeb.Domain.pdb
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.csproj.AssemblyReference.cache
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.AssemblyInfoInputs.cache
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.AssemblyInfo.cs
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.csproj.CoreCompileInputs.cache
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\refint\Mqeb.Domain.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\Mqeb.Domain.pdb
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Domain\obj\Debug\net5.0\ref\Mqeb.Domain.dll

@@ -1,0 +1,81 @@
+﻿@page
+@model Mqeb.Web.Pages.Admin.Users.CreateUserModel
+@{
+    ViewData["Title"] = "افزودن کاربر";
+}
+
+<section class="content-header">
+    <h1>
+        افزودن کاربر
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Admin"><i class="fa fa-dashboard"></i> پنل مدیریت</a></li>
+        <li><a href="/Admin/Users">مدیران سایت</a></li>
+        <li><a href="/">افزودن کاربر</a></li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">افزودن مدیر</h3>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+            <div class="box-body">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateUserViewModel.UserName"></label>
+                        <input asp-for="CreateUserViewModel.UserName" class="form-control" type="text" placeholder="نام کاربری">
+                        <span asp-validation-for="CreateUserViewModel.UserName" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateUserViewModel.Email"></label>
+                        <input asp-for="CreateUserViewModel.Email" class="form-control" type="text" placeholder="ایمیل">
+                        <span asp-validation-for="CreateUserViewModel.Email" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateUserViewModel.FirstName"></label>
+                        <input asp-for="CreateUserViewModel.FirstName" class="form-control" type="text" placeholder="نام">
+                        <span asp-validation-for="CreateUserViewModel.FirstName" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateUserViewModel.LastName"></label>
+                        <input asp-for="CreateUserViewModel.LastName" class="form-control" type="text" placeholder="نام خانوادگی">
+                        <span asp-validation-for="CreateUserViewModel.LastName" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateUserViewModel.Password"></label>
+                        <input asp-for="CreateUserViewModel.Password" class="form-control" type="text" placeholder="رمز عبور">
+                        <span asp-validation-for="CreateUserViewModel.Password" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateUserViewModel.RePassword"></label>
+                        <input asp-for="CreateUserViewModel.RePassword" class="form-control" type="text" placeholder="تکرار رمز عبور">
+                        <span asp-validation-for="CreateUserViewModel.RePassword" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateUserViewModel.UserAvatar"></label>
+                        <input asp-for="CreateUserViewModel.UserAvatar" class="form-control">
+                        <span asp-validation-for="CreateUserViewModel.UserAvatar" class="text-danger"></span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">ثبت</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial"/>
+}
+

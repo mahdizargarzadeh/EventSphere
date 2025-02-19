@@ -1,0 +1,83 @@
+﻿@page
+@model Mqeb.Web.Pages.Admin.Banner.CreateBannerModel
+@{
+    ViewData["Title"] = "افزودن بنر جدید";
+}
+
+<section class="content-header">
+    <h1>
+        @ViewData["Title"]
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Admin"><i class="fa fa-dashboard"></i> پنل مدیریت</a></li>
+        <li><a href="/Admin/Banner">مدیریت بنر ها</a></li>
+        <li><a href="/Admin/Banner/CreateBanner">@ViewData["Title"]</a></li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">@ViewData["Title"]</h3>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+            <div class="box-body">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="CreateBannerViewModel.BannerImage"></label>
+                        <input asp-for="CreateBannerViewModel.BannerImage" class="form-control">
+                        <p class="text-danger">براي بهتر نمايش دادن بنر باید عکسی كه آپلود مي كنيد سايز (1672 × 500) داشته باشد</p>
+                        <span asp-validation-for="CreateBannerViewModel.BannerImage" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="CreateBannerViewModel.BannerLink"></label>
+                            <input asp-for="CreateBannerViewModel.BannerLink" class="form-control">
+                            <p class="text-danger">اگر در این قسمت لینکی را وارد کنید کاربر با کلیک بر روی بنر به آن لینک هدایت می شود</p>
+                            <p class="text-success">لینک باید به این فرمت باشد : https://mqeb.ir</p>
+                            <span asp-validation-for="CreateBannerViewModel.BannerLink" class="text-danger"></span>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group col-md-6">
+                            <img class="ctreate-banner-image" id="imgBanner" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">ثبت</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+@section Scripts
+{
+<script>
+
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#imgBanner').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#CreateBannerViewModel_BannerImage").change(function () {
+        readURL(this);
+    });
+</script>
+
+<partial name="_ValidationScriptsPartial" />
+}

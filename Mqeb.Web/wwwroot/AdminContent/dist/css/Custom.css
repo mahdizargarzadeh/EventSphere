@@ -1,0 +1,55 @@
+﻿.input-half {
+    width: 50%;
+}
+
+.user-avatar {
+    width: 200px;
+    border-radius: 5px;
+    float: left;
+}
+
+.btn-top-of-sidebar {
+    margin: 6px 100px;
+    padding: 9px 50px;
+    background-color: #d61577;
+    border-color: #ad0b5d;
+    font-weight: bold;
+    color: #FFF;
+}
+
+    .btn-top-of-sidebar:hover {
+        color: #fff !important;
+    }
+
+@font-face {
+    font-family: "IRANSans";
+    src: url("../newFonts/IRANSansWeb(FaNum).eot"); /* IE9 Compat Modes */
+    src: url("../newFonts/IRANSansWeb(FaNum).eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../newFonts/IRANSansWeb(FaNum).ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../newFonts/IRANSansWeb(FaNum).woff") format("woff"), /* Modern Browsers */
+    url("../newFonts/IRANSansWeb(FaNum).woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: "IRANSans";
+}
+
+.li-m-10 {
+    margin: 10px 0;
+}
+
+.thead-background {
+    background-color: antiquewhite;
+}
+
+.tbody-background {
+    background-color: #ffffff;
+}
+
+.ctreate-banner-image {
+    height: 300px;
+    max-width: 500px;
+    float: left;
+}

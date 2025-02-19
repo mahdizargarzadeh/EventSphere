@@ -1,0 +1,18 @@
+﻿@model Mqeb.Domain.ViewModels.Blog.ShowBlogListItemViewModel
+@using Mqeb.Application.Utilities
+<div class="col-lg-4 col-sm-6 mb-4">
+    <div class="card">
+        <a href="/Blog/@Model.BlogId/@Model.Title.ToSlug()">
+            <img class="card-img-top box2-poster" src="/Blog/Poster/Small/@Model.ImageName" alt="Card image">
+        </a>
+        <div class="card-body">
+            <h2 class="IRANSans_Bold"><a href="/Blog/@Model.BlogId/@Model.Title.ToSlug()">@Model.Title</a></h2>
+            <span class="text-primary fa12 IRANSans_Medium">
+                <a href="#">@Model.Category</a>
+            </span>
+            <p class="box-description">
+                @Model.Description
+            </p>
+        </div>
+    </div>
+</div>

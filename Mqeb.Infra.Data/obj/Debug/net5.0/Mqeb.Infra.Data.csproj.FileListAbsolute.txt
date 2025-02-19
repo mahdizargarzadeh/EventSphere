@@ -1,0 +1,72 @@
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.deps.json
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.runtimeconfig.json
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.runtimeconfig.dev.json
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\ref\Mqeb.Infra.Data.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Domain.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.AssemblyReference.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.AssemblyInfo.cs
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.CopyComplete
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\ref\Mqeb.Infra.Data.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.genruntimeconfig.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.deps.json
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.runtimeconfig.json
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.runtimeconfig.dev.json
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\ref\Mqeb.Infra.Data.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Domain.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Domain.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.AssemblyReference.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.AssemblyInfo.cs
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.CopyComplete
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\ref\Mqeb.Infra.Data.dll
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.pdb
+C:\Users\IRANNOVIN\Desktop\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.genruntimeconfig.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.deps.json
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.runtimeconfig.json
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.runtimeconfig.dev.json
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.pdb
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Domain.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Domain.pdb
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.AssemblyReference.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.AssemblyInfoInputs.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.AssemblyInfo.cs
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.CoreCompileInputs.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.CopyComplete
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\refint\Mqeb.Infra.Data.dll
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.pdb
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.genruntimeconfig.cache
+D:\Old-Projects\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\ref\Mqeb.Infra.Data.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.deps.json
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.runtimeconfig.json
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.runtimeconfig.dev.json
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Infra.Data.pdb
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Domain.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\bin\Debug\net5.0\Mqeb.Domain.pdb
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.AssemblyReference.cache
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.AssemblyInfoInputs.cache
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.AssemblyInfo.cs
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.CoreCompileInputs.cache
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.csproj.CopyComplete
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\refint\Mqeb.Infra.Data.dll
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.pdb
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\Mqeb.Infra.Data.genruntimeconfig.cache
+D:\Old project\Mqeb Project\Mqeb\Mqeb.Infra.Data\obj\Debug\net5.0\ref\Mqeb.Infra.Data.dll

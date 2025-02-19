@@ -1,0 +1,95 @@
+﻿@using Mqeb.Application.Interfaces
+@using Mqeb.Application.Convertors
+@using Mqeb.Application.Utilities
+@model Tuple<List<Mqeb.Domain.ViewModels.Blog.ShowBlogListItemViewModel>,int>
+@{
+    ViewData["Title"] = "خبرنامه ها";
+}
+@inject IBlogService _BlogService;
+
+@section MetaTags
+{
+    <meta name="googlebot" content="index,follow">
+    <meta name="robots" content="noodp,noydir">
+}
+
+<section class="container mt-4 mb-2">
+    <div class="row">
+        <div class="col-12">
+            <div class="breadcrumb radius15 shadow-sm">
+                <ul>
+                    <li><a href="/">خانه / </a></li>
+                    <li><a href="/Blog" class="current">@ViewData["Title"]</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<form action="/Blog" method="get">
+    <input type="hidden" name="pageId" value="@ViewBag.pageId.ToString()" />
+    <section class="container mb-4">
+        <div class="row">
+            <div class="col-xl-3 order-xl-0 order-1 mb-4">
+
+                <div class="card pcountry cati  p-3 mb-3">
+                    <div class="d-flex flex-row justify-content-between bg-light py-2 px-4 my-2 bright radius15">
+                        <h2>دسته بندی ها</h2>
+                    </div>
+
+                    <ul class="list-unstyled">
+                        @foreach(var item in _BlogService.GetCategoriesForShowInBlogPages())
+                        {
+                            <li class="my-4">
+                            <a href="/Blog?selectedGroups=@item.CategoryId">
+                                <span>@item.CategoryTitle</span>
+                            </a>
+                        </li>
+                        }
+                    </ul>
+                </div>
+                <div class="card thumb-post p-3 mb-3">
+                    <h2 class="bg-light py-2 px-4 mt-2 mb-4 bright radius15">آخرین مطالب</h2>
+                    <ul class="fa12">
+                        @foreach (var item in _BlogService.GetBlogsForLatestContent())
+                        {
+                            <li>
+                                <div class="d-flex flex-row">
+                                    <a href="/Blog/@item.BlogId/@item.Title.ToSlug()"><img src="/Blog/Poster/Small/@item.ImageName"></a>
+                                    <div class="m-2">
+                                        <p><a href="/Blog/@item.BlogId/@item.Title.ToSlug()">@item.Title</a></p>
+                                        <span>
+                                            @item.CreateDate.ToShamsi()
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-9  order-xl-1 order-0 mb-4">
+
+                <div class="row">
+                    @foreach (var item in Model.Item1)
+                    {
+                        <partial name="_BoxBlog2" model="@item" />
+                    }
+                </div>
+                @if (Model.Item2 >= 1)
+                {
+                    <div class="row mt-3">
+                        <div class="col-12 text-center mx-auto">
+                            <ul class="pagination  justify-content-center">
+                                @for (int i = 1; i <= Model.Item2; i++)
+                                {
+                                    <li class="page-item @((i==ViewBag.pageId)?"active":"")"><a class="page-link" href="/Blog?pageId=@i">@i</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</form>
