@@ -1,4 +1,4 @@
-# EventSpher
+# EventSphere
 
 ## Introduction
 
