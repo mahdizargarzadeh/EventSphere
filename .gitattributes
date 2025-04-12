@@ -1,0 +1,14 @@
+
+wwwroot/** linguist-vendored
+css/** linguist-vendored
+js/** linguist-vendored
+lib/** linguist-vendored
+
+*.css linguist-vendored
+*.scss linguist-vendored
+*.less linguist-vendored
+*.js linguist-vendored
+*.html linguist-vendored
+*.php linguist-vendored
+
+*.cs linguist-language=C#
