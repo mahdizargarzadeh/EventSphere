@@ -1,0 +1,54 @@
+﻿@page "/Admin/AboutUs"
+@model Mqeb.Web.Pages.Admin.Home.AboutUsModel
+@{
+    ViewData["Title"] = "ویرایش قسمت درباره موسسه";
+}
+
+<section class="content-header">
+    <h1>
+        @ViewData["Title"]
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Admin"><i class="fa fa-dashboard"></i> پنل مدیریت</a></li>
+        <li><a href="/Admin/AboutUs">@ViewData["Title"]</a></li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">@ViewData["Title"]</h3>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="AboutUs.AboutUsId" />
+            <div class="box-body">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label asp-for="AboutUs.AboutDescription"></label>
+                        <textarea asp-for="AboutUs.AboutDescription" class="form-control" rows="10"></textarea>
+                        <span asp-validation-for="AboutUs.AboutDescription" class="text-danger"></span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-warning">ویرایش</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+@section Scripts
+{
+    <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+    <script>
+
+        CKEDITOR.replace('AboutUs_AboutDescription', {
+            customConfig: '/AdminContent/dist/js/Config.js'
+        });
+
+    </script>
+
+    <partial name="_ValidationScriptsPartial" />
+}

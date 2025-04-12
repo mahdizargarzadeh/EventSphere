@@ -1,0 +1,154 @@
+﻿@model List<Mqeb.Domain.Models.Blog.Category>
+@using Mqeb.Application.Convertors
+@using System.Security.Claims
+
+<div class="off-canvas-wrap ">
+    <div class="close-off-canvas-wrap">
+        <a href="#" id="of-close-off-canvas">
+            <i class="fal fa-times"></i>
+        </a>
+    </div>
+    <div class="off-canvas-inner">
+        <div id="of-mobile-nav" class="mobile-menu-wrap">
+            <ul class="mobile-menu">
+                <li class="current-menu-item">
+                    <a href="/">صفحه اصلی</a>
+                </li>
+                @foreach (var group in Model.Where(g => g.ParentID == null))
+                {
+                    <li>
+                        <a href="/Blog?selectedGroups=@group.CategoryId" class="">@group.CategoryTitle<i class="explain-menu fal fa-angle-left"></i></a>
+                        @if (Model.Any(g => g.ParentID == group.CategoryId))
+                        {
+                            <ul class="sub-menu" style="display: none;">
+                                @foreach (var sub in Model.Where(g => g.ParentID == group.CategoryId))
+                                {
+                                    <li>
+                                        <a href="/Blog?selectedGroups=@sub.CategoryId">@sub.CategoryTitle</a>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    </li>
+                }
+                <li><a href="/AboutUs">درباره موسسه</a></li>
+                <li><a href="/ContactUs">تماس با موسسه</a></li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <hr />
+                    <li><a>@User.Identity.Name</a></li>
+                    @if (bool.Parse(User.FindFirstValue("IsAdmin")))
+                    {
+                        <li><a href="/Admin">پنل ادمين</a></li>
+                    }
+                    <li><a href="/Logout">خروج</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<header class="main_header wide_header">
+    <div class="header_container">
+        <div class="container-fluid pt-1 brtm tophead3 bg-color7">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-sm-0 mb-2">
+                        <p class="fa12"><i class="fal fa-clock ml-1"></i>امروز @DateConvertor.ToShamsiForNow()</p>
+                    </div>
+                    <div class="col-md-6 header-login">
+                        <div class="head_social_wrap">
+                            <a href="https://www.instagram.com/mqebir/" class="el_instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="tel:03132252924" class="el_telegram-plane">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                        </div>
+
+
+                        <a href="http://mqebs.ir/login" target="_blank" class="tel_head">
+                            <span>ورود به پنل کاربری</span>
+                            <i class="fal fa-user"></i>
+                        </a>
+
+                        <div class="hidden-responsive">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a href="/Logout" class="tel_head">
+                                    <span>خروج</span>
+                                    <i class="fal fa-lock-open-alt"></i> |
+                                </a>
+                                <a class="tel_head">
+                                    <span>@User.Identity.Name</span>
+                                    <i class="fal fa-user"></i> |
+                                </a>
+
+                                @if (bool.Parse(User.FindFirstValue("IsAdmin")))
+                                {
+                                    <a class="tel_head" href="/Admin">
+                                        <span>پنل ادمین</span>
+                                    </a>
+                                }
+                            }
+                        </div>
+
+                        <div class="clear"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu_wrapper menu_sticky">
+            <div class="container p_relative h86">
+                <div id="navigation" class="of-drop-down of-main-menu" role="navigation">
+                    <ul class="menu">
+                        <li>
+                            <a href="/" class="current">
+                                <img class="main-logo" src="/Img/logo-main.png" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">صفحه اصلی</a>
+                        </li>
+                        @foreach (var group in Model.Where(g => g.ParentID == null))
+                        {
+                            <li class="has_sub ">
+                                <a href="/Blog?selectedGroups=@group.CategoryId">@group.CategoryTitle</a>
+                                @if (Model.Any(g => g.ParentID == group.CategoryId))
+                                {
+                                    <div class="second">
+                                        <div class="inner">
+                                            <ul>
+                                                @foreach (var sub in Model.Where(g => g.ParentID == group.CategoryId))
+                                                {
+                                                    <li>
+                                                        <a href="/Blog?selectedGroups=@sub.CategoryId">@sub.CategoryTitle</a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                }
+                            </li>
+                        }
+
+                        <li><a href="/AboutUs">درباره موسسه</a></li>
+                        <li><a href="/ContactUs">تماس با موسسه</a></li>
+
+                    </ul>
+                </div>
+                <div class="m_search pt-xl-3 pt-1"><i class="fal fa-search"></i></div>
+                <div class="is-show mobile-nav-button">
+                    <a id="of-trigger" class="icon-wrap  mt-2" href="#"> <i class="fal fa-bars"></i>فهرست</a>
+                </div>
+                <form class="search_wrap mt-lg-0" id="ajax-form-search" method="get" action="/Blog">
+
+                    <input type="text" class="search-field" name="filter" placeholder="کلید واژه مورد نظر ...">
+                    <button><i class="fal fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>

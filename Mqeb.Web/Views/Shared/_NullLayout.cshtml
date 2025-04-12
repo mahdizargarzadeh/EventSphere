@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+    <title>@ViewData["Title"] - موسسه قرآن و عترت بينه</title>
+
+    @RenderSection("MetaTags",false)
+    <partial name="_MetaTags" />
+    <partial name="_HeaderRefrence" />
+
+</head>
+
+
+    @RenderBody()
+    <partial name="_FooterRefrence" />
+    <partial name="_Message" />
+
+    @RenderSection("Scripts", required: false)
+
+</html>

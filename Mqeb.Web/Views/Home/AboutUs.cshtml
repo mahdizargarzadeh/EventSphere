@@ -1,0 +1,40 @@
+﻿@model Mqeb.Domain.Models.Home.AboutUs
+@{
+    ViewData["Title"] = "درباره موسسه";
+}
+
+@section MetaTags
+{
+    <meta name="googlebot" content="index,follow">
+    <meta name="robots" content="noodp,noydir">
+}
+
+<section class="container mb-2 mt-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="breadcrumb radius15 shadow-sm">
+                <ul>
+                    <li><a href="/">خانه / </a></li>
+                    <li><a href="/AboutUs" class="current">درباره موسسه</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container mb-4">
+    <div class="row">
+        <div class="col-xl-12  mb-3">
+            <div class="card  mb-4">
+                <div class="card-header">
+                    <h2>درباره موسسه</h2>
+                </div>
+                <div class="card-body  p-md-4">
+                    @Html.Raw(Model.AboutDescription)
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+

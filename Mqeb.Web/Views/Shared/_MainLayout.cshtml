@@ -1,0 +1,108 @@
+﻿@using Mqeb.Application.Interfaces;
+@inject IBlogService _BlogService;
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+
+    <title>@ViewData["Title"]</title>
+    @RenderSection("MetaTags",false)
+    <partial name="_MetaTags" />
+    <partial name="_HeaderRefrence" />
+
+</head>
+<body class="rtl demo3">
+
+    <div class="main_wrap">
+        <div class="of-site-mask"></div>
+
+        @await Component.InvokeAsync("CategoryComponent")
+
+        <div class="clearfix"></div>
+
+        @RenderSection("Banner", false)
+
+        @RenderBody()
+
+        <footer class="fdemo3 pt-4 pb-2">
+            <div class="container footer-wrap">
+                <div class="row py-3">
+                    <div class="col-lg-6 col-md-8  col-sm-12 mb-4 order-lg-0 order-3">
+                        <div class="pl-md-4 mb-2 text-right">
+                            <a href="/"><img src="/Img/logo.png" class="img-fluid mylogo mb-4"></a>
+                            <p>
+                                با استعانت از الطاف خاصه الهی، جمعی از خادمان قرآن کریم از سال ۱۳۶۵ فعالیت قرآنی خود را با برگزاری جلسات و محافل قرآنی در مساجد، پایگاه‌های بسیج و کانون‌های فرهنگی اصفهان آغاز نمودند. سپس با تأسیس “جامعه قاریان قرآن کریم اصفهان” با رویکردی بدیعانه و در عرصه‌های مختلف از قبیل تشکیل گروه‌های تواشیح،‌ برگزاری محافل قرآنی، اعزام داور و قاری به مسابقات داخلی و بین المللی، برگزاری مسابقات قرآنی، حضوری فعال و چشمگیر پیدا نمودند.
+                            </p>
+                            <ul class="standard_social_links mt-2 float-right">
+
+
+                                <li class="round-btn btn-social">
+                                    <a href="http://sapp.ir/mqebir">
+                                        <img src="/Img/social-logos/soroush-logo.png" width="17px" />
+                                    </a>
+
+                                </li>
+                                <li class="round-btn btn-social">
+                                    <a href="https://eitaa.com/mqebir">
+                                        <img src="/Img/social-logos/eitaa-logo.png" width="17px" />
+                                    </a>
+                                </li>
+                                <li class="round-btn btn-instagram">
+                                    <a href="https://www.instagram.com/mqebir/"><svg class="svg-inline--fa fa-instagram fa-w-14" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <i class="fab fa-instagram" aria-hidden="true"></i> --></a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 mb-4 order-lg-2 order-1">
+                        <h3>دسته بندی ها</h3>
+                        <ul class="footer-category">
+                            <li>
+                                <a href="/"><i class="fal fa-angle-left ml-2"></i>صفحه اصلی</a>
+                            </li>
+                            @foreach (var item in _BlogService.GetAllCategory().Where(c => c.ParentID == null))
+                            {
+                                <li>
+                                    <a href="/Blog?selectedGroups=@item.CategoryId"><i class="fal fa-angle-left ml-2"></i>@item.CategoryTitle</a>
+                                </li>
+                            }
+                            <li>
+                                <a href="/AboutUs"><i class="fal fa-angle-left ml-2"></i>درباره موسسه</a>
+                            </li>
+                            <li>
+                                <a href="/ContactUs"><i class="fal fa-angle-left ml-2"></i>تماس با موسسه</a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 px-md-3 mb-4 order-lg-3  order-4">
+                        <h3>عضویت در خبرنامه</h3>
+                        <p> ثبت نام کنید و آخرین مطالب را از طریق ایمیل دریافت کنید ، جهت ثبت نام فقط کافی ست که آدرس ایمیل را در کادر زیر وارد نمایید</p>
+                        <form class="newsletter p_relative mt-3" method="post" asp-action="NewsLetter" asp-controller="Home">
+                            <input type="email" name="email" placeholder="آدرس ایمیل" required>
+                            <button class="newsletter_submit_btn" type="submit"><i class="fab fa-telegram-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="container-fluid">
+                        <div class="copyright">&copy; تمامی حقوق معنوی و مادی این وب سایت متعلق به موسسه فرهنگی قرآن و عترت بینه می باشد.</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <partial name="_FooterRefrence" />
+    <partial name="_Message" />
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

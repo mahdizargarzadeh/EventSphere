@@ -1,0 +1,93 @@
+﻿@page
+@using Mqeb.Application.Convertors
+@model Mqeb.Web.Pages.Admin.Users.IndexModel
+@{
+    ViewData["Title"] = "مدیران سایت";
+}
+
+<section class="content-header">
+    <h1>
+        مدیران سایت
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Admin"><i class="fa fa-dashboard"></i> پنل مدیریت</a></li>
+        <li><a href="/Admin/Users">مدیران سایت</a></li>
+        <li><a href="/Admin/Users">لیست مدیران</a></li>
+
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <form>
+            <div class="form-group col-md-5">
+                <input type="text" name="filterUserName" class="form-control" placeholder="نام کاربری" />
+            </div>
+            <div class="form-group col-md-5">
+                <input type="text" name="filterEmail" class="form-control" placeholder="ایمیل" />
+            </div>
+            <div class="col-sm-2 col-md-2">
+                <button type="submit" class="btn btn-info">جستجو</button>
+                <a class="btn btn-success" href="/Admin/Users">خالی</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-5 col-md-5">
+            <a class="btn btn-success" href="/Admin/Users/CreateUser">افزودن کاربر جدید</a>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-example" aria-describedby="dataTables-example_info">
+                <thead class="thead-background">
+                    <tr>
+                        <th>نام و نام خانوادگی</th>
+                        <th>نام کاربری</th>
+                        <th>ایمیل</th>
+                        <th>تاریخ ثبت نام</th>
+                        <th>دستورات</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody-background">
+                    @foreach (var item in Model.UserForAdminViewModel.Users)
+                    {
+                        <tr>
+                            <td>@item.FirstName @item.LastName</td>
+                            <td>@item.UserName</td>
+                            <td>@item.Email</td>
+                            <td>@item.CreateDate.ToShamsi()</td>
+                            <td>
+                                <form method="post">
+                                    <a href="/Admin/Users/EditUser/@item.UserId" class="btn btn-warning btn-sm">
+                                        ویرایش
+                                    </a>
+                                    <button type="submit" formaction="/Admin/Users/DeleteUser?userId=@item.UserId&handler=delete" class="btn btn-danger btn-sm">
+                                        حذف
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    @if (Model.UserForAdminViewModel.CurrentPage >= 1)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="pagination pagination-sm no-margin pull-right">
+                    @for (int i = 1; i <= Model.UserForAdminViewModel.PageCount; i++)
+                    {
+                        <li class="@((i==Model.UserForAdminViewModel.CurrentPage)?"active":"")">
+                            <a href="/Admin/Users?PageId=@i">@i</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+</section>

@@ -1,0 +1,74 @@
+﻿@page "/Admin/ContactUs"
+@using Mqeb.Application.Convertors
+@model Mqeb.Web.Pages.Admin.ContactUses.IndexModel
+@{
+    ViewData["Title"] = "لیست پیام های ارتباط با موسسه";
+}
+
+<section class="content-header">
+    <h1>
+        لیست تماس با ما
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Admin"><i class="fa fa-dashboard"></i> پنل مدیریت</a></li>
+        <li><a href="/Admin/ContactUs">@ViewData["Title"]</a></li>
+
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <form>
+            <div class="form-group col-md-5">
+                <input type="text" name="filterTitle" class="form-control" placeholder="عنوان پیام" />
+            </div>
+            <div class="col-sm-2 col-md-2">
+                <button type="submit" class="btn btn-info">جستجو</button>
+                <a class="btn btn-success" href="/Admin/Blogs">خالی</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-example" aria-describedby="dataTables-example_info">
+                <thead class="thead-background">
+                    <tr>
+                        <th>عنوان</th>
+                        <th>نویسنده</th>
+                        <th>تاریخ ارسال</th>
+                        <th>پاسخ داده شده / نشده</th>
+                        <th>دستورات</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody-background">
+                    @foreach (var item in Model.ContactUsForAdminViewModel.ContactUses)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@item.Email</td>
+                            <td>@item.CreateDate.ToShamsi()</td>
+                            <td>
+                                @if (item.IsAnswer)
+                                {
+                                    <small class="text-success">پاسخ داده شده</small>
+                                }
+                                else
+                                {
+                                    <small class="text-danger">پاسخ داده نشده</small>
+                                }
+                            </td>
+                            <td>
+                                <a href="/Admin/ContactUs/Answer/@item.ContactUsId" class="btn btn-warning btn-sm">
+                                    مشاهده و پاسخ به پیام
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</section>

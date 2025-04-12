@@ -1,0 +1,116 @@
+﻿@page "{id}"
+@model Mqeb.Web.Pages.Admin.Blogs.EditBlogModel
+@{
+    ViewData["Title"] = "ویرایش بلاگ";
+}
+
+<section class="content-header">
+    <h1>
+        افزودن بلاگ
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/Admin"><i class="fa fa-dashboard"></i> پنل مدیریت</a></li>
+        <li><a href="/Admin/Blogs">مدیریت بلاگ ها</a></li>
+        <li><a href="/">ویرایش بلاگ</a></li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-success">
+        <div class="box-header with-border">
+            <h3 class="box-title">ویرایش بلاگ</h3>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="EditBlogViewModel.BlogId" />
+            <input type="hidden" asp-for="EditBlogViewModel.BlogImageName" />
+            <div class="box-body">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label asp-for="EditBlogViewModel.BlogTitle"></label>
+                        <input asp-for="EditBlogViewModel.BlogTitle" class="form-control" type="text" placeholder="عنون بلاگ">
+                        <span asp-validation-for="EditBlogViewModel.BlogTitle" class="text-danger"></span>
+                        <br>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label asp-for="EditBlogViewModel.CategoryId"></label>
+                        <select asp-for="EditBlogViewModel.CategoryId" class="form-control" asp-items="@(ViewData["Categories"] as SelectList)"></select>
+                        <span asp-validation-for="EditBlogViewModel.CategoryId" class="text-danger"></span>
+                        <br>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label asp-for="EditBlogViewModel.SubCategory"></label>
+                        <select asp-for="EditBlogViewModel.SubCategory" class="form-control" asp-items="@(ViewData["SubGroups"] as SelectList)"></select>
+                        <span asp-validation-for="EditBlogViewModel.SubCategory" class="text-danger"></span>
+                        <br>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label asp-for="EditBlogViewModel.BlogDescription"></label>
+                        <textarea asp-for="EditBlogViewModel.BlogDescription" class="form-control" rows="10"></textarea>
+                        <span asp-validation-for="EditBlogViewModel.BlogDescription" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label asp-for="EditBlogViewModel.BlogVideos"></label>
+                        <input asp-for="EditBlogViewModel.BlogVideos" class="form-control" type="text" placeholder="مثال : https://www.aparat.com/video/video/embed/videohash/eVRMG/vt/frame - https://www.aparat.com/video/video/embed/videohash/Ti4pq/vt/frame">
+                        <span class="text-danger">لینک ها را با - جدا کنید</span>
+                        <span asp-validation-for="EditBlogViewModel.BlogVideos" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="EditBlogViewModel.LowDescription"></label>
+                        <textarea asp-for="EditBlogViewModel.LowDescription" class="form-control" rows="10"></textarea>
+                        <span asp-validation-for="EditBlogViewModel.LowDescription" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="EditBlogViewModel.Tags"></label>
+                        <input asp-for="EditBlogViewModel.Tags" class="form-control" type="text" placeholder="مثال : جلسه قرآن هفتگی - استاد شاهمیوه - موسسه بینه">
+                        <span class="text-danger">کلمات را با - جدا کنید</span>
+                        <span asp-validation-for="EditBlogViewModel.Tags" class="text-danger"></span>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label asp-for="EditBlogViewModel.BlogPoster"></label>
+                        <input asp-for="EditBlogViewModel.BlogPoster" class="form-control">
+                        <span asp-validation-for="EditBlogViewModel.BlogPoster" class="text-danger"></span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-warning">ویرایش</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+@section Scripts
+{
+<script src="/ckeditor4/ckeditor/ckeditor.js"></script>
+<script>
+
+    $("#EditBlogViewModel_CategoryId").change(function () {
+            $("#EditBlogViewModel_SubCategory").empty();
+            $.getJSON("/Home/GetSubGroups/" + $("#EditBlogViewModel_CategoryId :selected").val(),
+                function (data) {
+
+                    $.each(data,
+                        function () {
+                            $("#EditBlogViewModel_SubCategory").append('<option value=' + this.value + '>' + this.text + '</option>');
+                        });
+
+                });
+        });
+
+    CKEDITOR.replace('EditBlogViewModel_BlogDescription', {
+        customConfig: '/ckeditor4/ckeditor/config.js'
+    });
+
+</script>
+
+<partial name="_ValidationScriptsPartial" />
+}

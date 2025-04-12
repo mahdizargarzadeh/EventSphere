@@ -1,0 +1,94 @@
+﻿
+
+@model Mqeb.Application.DTOs.Home.ContactUsViewModel
+
+@{
+    ViewData["Title"] = "تماس با ما";
+}
+
+@section MetaTags
+{
+    <meta name="googlebot" content="index,follow">
+    <meta name="robots" content="noodp,noydir">
+}
+
+<div class="main_wrap">
+
+    <section class="container-fluid bg-purple h120"></section>
+
+    <div class="container p-md-5 p-4 card  mt-md-5 mt-3 boxcontent">
+        <h3 class="mb-md-5 mb-4  bt-color IRANSansWeb_Medium">تماس با ما</h3>
+        <pre asp-validation-summary="All"></pre>
+        <div class="row">
+            <div class="col-lg-5  mb-4 px-4 brcontact">
+                <div class="contact-block mb-3">
+                    <h4><i class="fal fa-map-marker-check ml-2 p-2"></i>آدرس ما: </h4>
+
+                    <p>
+                        استان اصفهان- خیابان احمدآباد- ابتدای خیابان گلزار- بن بست ۵۷ – موسسه فرهنگی قرآن و عترت بینه
+                    </p>
+
+                </div>
+                
+                <div class="contact-block mb-3">
+                    <h4><i class="fal fa-phone ml-2 p-2"></i>شماره های تماس</h4>
+                    <p>
+                        <span>031-32250424</span> -
+                        <span>031-32252924</span>
+                        <span>031-32252927</span>
+                    </p>
+                </div>
+
+                <div class="contact-block mb-3">
+                    <h4><i class="fal fa-clock ml-2 p-2"></i>فاکس</h4>
+                    <p>
+                        <span>داخلی 25</span>
+                    </p>
+
+                </div>
+
+                <div class="contact-block mb-3">
+                    <h4><i class="fal fa-envelope-open ml-2 p-2"></i>آدرس ایمیل</h4>
+                    <p>info@domain.com  </p>
+                </div>
+                <div class="contact-block mb-3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101637.20058196294!2d55.12445659536889!3d37.24385138392286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f82bf0f3681aac1%3A0xb8eacc0ae01e8b94!2sQabus%20Ibn%20Voshmgir%20Tower!5e0!3m2!1sen!2s!4v1611689478637!5m2!1sen!2s" class="radius15" width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+
+            </div>
+
+            <div class="col-lg-7 mb-4">
+                <div class="contact-shape d-lg-block d-none">
+                    <img src="Img/contact-form.png" class="img-fluid" alt="Img">
+                </div>
+                <div class="mx-md-5 p-sm-5 p-4 card position-relative">
+                    <p class="mb-3">جهت ارسال نظـرات و پیشنهادات خود می توانید از فرم زیر استفاده نمایید</p>
+                    <form class="contact-form" method="post">
+                        <div class="form-group">
+                            <input type="email" asp-for="Email" class="form-control mb-3" placeholder="ایمیل">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" asp-for="Title" class="form-control mb-3" placeholder="موضوع پیام">
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea asp-for="Message" class="form-control mb-3" cols="60" rows="9" placeholder="متن پیام"></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+                        <br/>
+                        <google-recaptcha></google-recaptcha>
+                        <br/>
+                        <button type="submit" class="btn btn-lightorng">ارسال نظر<i class="fal fa-paper-plane pr-2"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="https://www.google.com/recaptcha/api.js?hl=fa" async defer></script>
+    <partial name="_ValidationScriptsPartial"/>
+}
